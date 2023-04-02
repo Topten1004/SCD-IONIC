@@ -1,0 +1,16 @@
+<div class="wheel-selector-main"
+>
+  <p class="opacity-max" (click)="selectValue(selected_value - offset * 2)">
+    {{ selected_value >= min + offset * 2 ? selected_value - offset * 2 : ''}}
+  </p>
+  <p class="opacity-min" (click)="selectValue(selected_value - offset * 1)">
+    {{selected_value >= min + offset * 1 ? selected_value - offset * 1 : ''}}
+  </p>
+  <p class="cur_value">{{selected_value}}</p>
+  <p class="opacity-min" (click)="selectValue(selected_value + offset * 1)">
+    {{selected_value <= max - offset * 1 ? selected_value + offset * 1 : ''}}
+  </p>
+  <p class="opacity-max" (click)="selectValue(selected_value + offset * 2)">
+    {{selected_value <= max - offset * 2 ? selected_value + offset * 2 : ''}}
+  </p>
+</div>

@@ -1,0 +1,85 @@
+.login-main {
+  ion-modal {
+    --ion-background-color: #ffffff85;
+  }
+
+  background-color: white;
+  width: 100vw;
+  height: 100vh;
+
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+
+  .welcome {
+    color : gray;
+    font-size: 25px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: bold;
+  }
+
+  .question {
+    color : rgb(179, 16, 16);
+    margin: 3px;
+    margin-bottom: 10px;
+    font-size: 17px;
+    font-weight: bold;
+  }
+
+  .link {
+    color: rgb(179, 16, 16);
+    text-decoration: underline;
+  }
+
+  .login-form {
+    display: flex;
+    flex-direction: column;
+    gap : 30px;
+
+    ion-item {
+      --ion-item-background: white;
+      ion-label {
+        --color : gray;
+        font-size: 20px;
+      }
+
+      ion-input {
+        --color : gray;
+      }
+    }
+
+    margin-bottom: 80px;
+    margin-top: 80px;
+  }
+
+  .login-btn-container {
+    ion-button {
+      --background: linear-gradient(360deg, rgba(173,247,163,1) 0%, rgba(153,218,144,1) 31%, rgba(5,166,40,1) 100%);
+
+      // --background-hover: #9ce0be;
+      // --background-activated: #88f4be;
+      // --background-focused: #88f4be;
+
+      --color: white;
+      font-weight: 800;
+      font-size: 15px;
+
+      --border-radius: 30px;
+
+      --box-shadow: 0 2px 6px 0 rgb(0, 0, 0, 0.25);
+
+      --ripple-color: gray;
+
+      --padding-top: 25px;
+      --padding-bottom: 25px;
+      --padding-start : 50px;
+      --padding-end : 50px;
+    }
+
+    .forgot-pass {
+      color : rgb(179, 16, 16);
+      margin-top: 50px;
+    }
+  }
+}

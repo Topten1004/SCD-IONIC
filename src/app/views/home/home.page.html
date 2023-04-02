@@ -1,0 +1,23 @@
+<ion-content [fullscreen]="true">
+  <div class="home-main">
+    <div class="company-mark" *ngIf="!isOpenLangOption">
+      <img src="assets/img/Artwork.png"/>
+      <p class="company-title">SCD CHOMMIE</p>
+    </div>
+
+    <div class="lang-selector" *ngIf="isOpenLangOption">
+      <p class="option-desc">Choose your language option</p>
+      <div class="btn-group">
+        <ion-button>English</ion-button>
+        <ion-button>FRENCH</ion-button>
+      </div>
+
+      <div class="save-btn-container">
+        <ion-button class="save-btn" [routerLink]="['/login-method']">SAVE</ion-button>
+      </div>
+    </div>
+
+    <p class="desc">brought to you by</p>
+    <img src="assets/img/logo.png" width="40%"/>
+  </div>
+</ion-content>

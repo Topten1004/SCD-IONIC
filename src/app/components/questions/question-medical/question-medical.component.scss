@@ -1,0 +1,53 @@
+.question-medical-main {
+  background-color: white;
+
+  padding-top : 50px;
+  padding-left : 5%;
+  padding-right : 5%;
+
+  p {
+    margin : 0px;
+  }
+
+  .section-title {
+    color: rgb(179,16,16);
+    font-size : 20px;
+    font-weight: 800;
+  }
+
+  ion-item  {
+    --background : white;
+  }
+
+  ion-label {
+    --color : gray;
+    font-size : 15px;
+  }
+  ion-checkbox {
+    --background : white;
+    --size: 25px;
+    --background-checked: rgb(179,16,16);
+  }
+
+  ion-checkbox::part(container) {
+    border-radius: 50%;
+    border: 2px solid rgb(179,16,16);
+  }
+
+  .medication-list {
+    ion-item {
+      --border-color : white;
+    }
+  }
+
+  ion-input {
+    --color : gray;
+  }
+
+  .desc {
+    padding-top : 20px;
+
+    color: rgb(179,16,16);
+    font-weight: 800;
+  }
+}

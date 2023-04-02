@@ -1,0 +1,161 @@
+<ion-content>
+  <div class="calendar-main">
+    <p class="title">
+      Your reminder has been added
+    </p>
+
+    <div class="calendar-container">
+      <!-- <ion-datetime
+        minuteValues="0,15,30,45"
+        dayValues="5,10,15,20,25,30"
+      ></ion-datetime> -->
+      <app-reminder-calendar></app-reminder-calendar>
+    </div>
+
+    <div class="compare-days-btn-container">
+      <ion-button id="compare-days-dialog">Compare Days</ion-button>
+    </div>
+
+    <p class="reminder-list-label">
+      Reminders Today
+    </p>
+
+    <div class="reminder-list">
+      <div class="reminder-item">
+        <div class="time">
+          10am
+        </div>
+        <div class="reminder-desc">
+          Take red pill and blue pill
+        </div>
+      </div>
+
+      <div class="reminder-item">
+        <div class="time">
+          10am
+        </div>
+        <div class="reminder-desc">
+          Take red pill and blue pill
+        </div>
+      </div>
+
+      <div class="reminder-item">
+        <div class="time">
+          10am
+        </div>
+        <div class="reminder-desc">
+          Take red pill and blue pill
+        </div>
+      </div>
+
+    </div>
+
+    <ion-modal id="compare-days-modal" #modal trigger="compare-days-dialog">
+      <ng-template>
+        <div class="wrapper">
+
+          <div class="date-selector-container">
+            <div class="date-selector">
+              <div class="previous-btn" (click)="goToPrevious()">
+
+              </div>
+              <div class="date" *ngIf="!isToday">
+                {{selectedDate.getFullYear()}}/{{selectedDate.getMonth()+1}}/{{selectedDate.getDate()}}
+              </div>
+              <div class="date" *ngIf="isToday">
+                Today
+              </div>
+              <div class="next-btn" (click)="goToNext()">
+
+              </div>
+            </div>
+          </div>
+          
+          <div class="circle-hour-list">
+            <div class="circle-hour">
+              <app-circle-hour [value]="'7'" [borderColor]="'red'" [suffix]="'Hrs'"></app-circle-hour>
+              <p class="circle-hour-desc">Sleep</p>
+            </div>
+            <div class="circle-hour">
+              <app-circle-hour [value]="'2'" [borderColor]="'red'" [suffix]="'ltrs'"></app-circle-hour>
+              <p class="circle-hour-desc">Water</p>
+            </div>
+            <div class="circle-hour">
+              <app-circle-hour [value]="'10'" [borderColor]="'red'" ></app-circle-hour>
+              <p class="circle-hour-desc">Pain level</p>
+            </div>
+          </div>
+          <p class="list-label">Reminders</p>
+          <div class="list-container">
+
+            <div class="list-item">
+              <div class="time">
+                10am
+              </div>
+              <div class="list-desc">
+                Take red pill and blue pill
+              </div>
+            </div>
+
+            <div class="list-item">
+              <div class="time">
+                10am
+              </div>
+              <div class="list-desc">
+                Take red pill and blue pill
+              </div>
+            </div>
+
+            <div class="list-item">
+              <div class="time">
+                10am
+              </div>
+              <div class="list-desc">
+                Take red pill and blue pill
+              </div>
+            </div>
+
+          </div>
+          <ion-button >Add Reminder</ion-button>
+
+          <p class="list-label">Diet</p>
+          <div class="list-container">
+
+            <div class="list-item">
+              <div class="time">
+                10am
+              </div>
+              <div class="list-desc">
+                Apple 20 grams
+              </div>
+            </div>
+
+            <div class="list-item">
+              <div class="time">
+                10am
+              </div>
+              <div class="list-desc">
+                Cheese Sandwich 20 grams
+              </div>
+            </div>
+
+            <div class="list-item">
+              <div class="time">
+                10am
+              </div>
+              <div class="list-desc">
+                Apple 20 grams
+              </div>
+            </div>
+          </div>
+          <ion-button >Add Reminder</ion-button>
+
+          <div class="btn-group">
+            <ion-button class="update-btn">Update</ion-button>
+            <ion-button class="close-btn">Close</ion-button>
+          </div>
+        </div>
+      </ng-template>
+    </ion-modal>
+  </div>
+</ion-content>

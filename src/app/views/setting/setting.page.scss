@@ -1,0 +1,69 @@
+.setting-main {
+  min-height: 100vh;
+
+  .white-back {
+    background-color: white;
+    height: 70px;
+    border-bottom: 2px solid rgb(179,16,16);
+
+    position: relative;
+
+    img {
+      position: absolute;
+      width: 120px;
+      left : 0px;
+      top : 0px;
+    }
+  }
+
+  .gray-back {
+    background-color: gray;
+    height: calc(100vh - 70px);
+  }
+
+  .setting-pad {
+    padding-top: 50px;
+    padding-left : 20px;
+
+    position : fixed ;
+    height: 100vh;
+    width: 70%;
+
+    top : 0px;
+    right: 0px;
+
+    background-color: rgb(179,16,16);
+
+    .avatar {
+      width : 150px;
+      height: 150px;
+
+      background-color: white;
+      border-radius: 50%;
+
+      margin-left: 30px;
+      margin-bottom: 30px;
+    }
+
+    .setting-item {
+      color : white;
+    }
+
+    ion-list {
+      background-color: rgb(179,16,16);
+
+      ion-item {
+        --ion-item-background: rgb(179,16,16) ;
+        ion-label {
+          --color : white;
+        }
+
+        a {
+          text-decoration: none;
+          color : white;
+        }
+      }
+    }
+
+  }
+}

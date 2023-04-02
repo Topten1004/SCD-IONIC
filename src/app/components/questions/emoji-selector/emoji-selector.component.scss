@@ -1,0 +1,115 @@
+.emoji-selector-main {
+  width : 100%;
+
+  background-color: white;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  .question {
+    color :  rgb(179, 16, 16);
+    font-size: 25px;
+    font-weight: 800;
+
+    width: 85%;
+  }
+
+  .emoji-img {
+    margin-top: 30px;
+    display: flex;
+    gap : 5px;
+
+    img {
+      width : 45px;
+    }
+  }
+
+  .emoji-number {
+    margin-top: 30px;
+
+    display : flex;
+    gap : 5px;
+    justify-content: center;
+
+    .circle {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+    }
+
+    .red {
+      border :2px solid rgb(179, 16, 16);
+    }
+
+    .green {
+      border : 2px solid green;
+    }
+
+    .line-group {
+      width: 50px;
+
+      .first {
+        background-color: rgb(209, 20, 20);
+        border-top-left-radius: 5px;
+        border-bottom-left-radius: 5px;
+      }
+
+      .second {
+        background-color: rgb(230, 149, 1);
+      }
+
+      .third {
+        background-color: rgb(209, 209, 5);
+      }
+
+      .fourth {
+        background-color: rgb(128, 192, 33);
+      }
+
+      .fifth {
+        background-color: green;
+        border-top-right-radius: 5px;
+        border-bottom-right-radius: 5px;
+      }
+
+      .line {
+        width : 100%;
+        height : 7px;
+      }
+      .number {
+        color : gray;
+        text-align: center;
+        font-weight: 800;
+        margin-top: 5px;
+      }
+    }
+  }
+
+  .next-btn-container {
+    margin-top: 40px;
+
+    ion-button {
+      --background: linear-gradient(360deg, rgba(173,247,163,1) 0%, rgba(153,218,144,1) 31%, rgba(5,166,40,1) 100%);
+      // --background-hover: #9ce0be;
+      // --background-activated: #88f4be;
+      // --background-focused: #88f4be;
+
+      --color: white;
+      font-weight: 800;
+      font-size: 15px;
+
+      --border-radius: 30px;
+
+      --box-shadow: 0 2px 6px 0 rgb(0, 0, 0, 0.25);
+
+      --ripple-color: gray;
+
+      --padding-top: 25px;
+      --padding-bottom: 25px;
+      --padding-start : 50px;
+      --padding-end : 50px;
+    }
+  }
+}

@@ -1,0 +1,41 @@
+<ion-content [fullscreen]="true">
+  <div class="sign-up-main">
+    <img src="assets/img/sickle_in_africa.png" width="50%" />
+    <p class="welcome">Welcome!</p>
+    <p class="question">have an account?</p>
+    <a class="link" routerLink="/login">login here:</a>
+    <div class="sign-up-form">
+      <ion-item>
+        <ion-label position="stacked">Username</ion-label>
+        <ion-input [clearOnEdit]="true" placeholder=""></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="stacked">Password</ion-label>
+        <ion-input type="password" placeholder=""></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="stacked">Date of birth</ion-label>
+        <ion-input type="date" placeholder=""></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="stacked">Condition</ion-label>
+        <ion-select placeholder="Select fruit">
+          <ion-select-option value="apples">Apples</ion-select-option>
+          <ion-select-option value="oranges">Oranges</ion-select-option>
+          <ion-select-option value="bananas">Bananas</ion-select-option>
+        </ion-select>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="stacked">Year of Diagnosis</ion-label>
+        <ion-input type="text" placeholder=""></ion-input>
+      </ion-item>
+    </div>
+    <div class="sign-up-btn-container">
+      <ion-button >Sign up</ion-button>
+    </div>
+  </div>
+</ion-content>

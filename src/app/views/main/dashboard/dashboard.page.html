@@ -1,0 +1,140 @@
+<ion-content>
+  <div class="dashboard-main">
+    <p class="title">
+      You are beautiful!
+    </p>
+    <p class="desc">
+      And you are worth it!
+    </p>
+
+    <!-- Graph Start -->
+    <div class="graph-pad">
+      <p class="section-title">Discomfort log</p>
+      <div echarts [options]="chartOption" class="demo-chart"></div>
+      <div class="update-btn-container">
+        <ion-button>Update discomfort log</ion-button>
+      </div>
+    </div>
+    <!-- Graph End -->
+
+    <!-- Pattern Start -->
+    <div class="pattern-pad">
+      <p class="section-title">Your Sleep Patterns</p>
+      <div class="patterns">
+        <div class="bar-group">
+          <app-vertical-range [bgColor]="'yellow'" [value]="'70%'" [label]="'M'"></app-vertical-range>
+          <app-vertical-range [bgColor]="'rgb(179,16,16)'" [value]="'20%'" [label]="'T'"></app-vertical-range>
+          <app-vertical-range [bgColor]="'green'" [value]="'90%'" [label]="'W'"></app-vertical-range>
+          <app-vertical-range [bgColor]="'orange'" [value]="'50%'" [label]="'T'"></app-vertical-range>
+          <app-vertical-range [bgColor]="'red'" [value]="'30%'" [label]="'F'"></app-vertical-range>
+          <app-vertical-range [bgColor]="'rgb(179,16,16)'" [value]="'40%'" [label]="'S'"></app-vertical-range>
+          <app-vertical-range [bgColor]="'rgb(179,16,16)'" [value]="'20%'" [label]="'S'"></app-vertical-range>
+        </div>
+        <div class="hour-info">
+          <p class="hour-desc">Last 7 days</p>
+          <app-circle-hour [value]="'35'" [borderColor]="'green'" [suffix]="'Hrs'"></app-circle-hour>
+          <p class="hour-desc">Last 30 days</p>
+          <app-circle-hour [value]="'35'" [borderColor]="'red'" [suffix]="'Hrs'"></app-circle-hour>
+        </div>
+      </div>
+    </div>
+    <!-- Pattern End -->
+
+    <!-- Upcoming Start -->
+    <div class="upcoming-reminder">
+      <p class="section-title">Upcoming reminders</p>
+      <div class="reminder-list">
+        <div class="reminder">
+          <div class="date">10 Aug</div>
+          <div class="time green">11 am</div>
+          <div class="reminder-desc">Take red pill and blue pill</div>
+        </div>
+
+        <div class="reminder">
+          <div class="date">10 Aug</div>
+          <div class="time green">11 am</div>
+          <div class="reminder-desc">Take red pill and blue pill</div>
+        </div>
+
+        <div class="reminder">
+          <div class="date">10 Aug</div>
+          <div class="time green">11 am</div>
+          <div class="reminder-desc">Take red pill and blue pill</div>
+        </div>
+
+        <div class="reminder">
+          <div class="date">10 Aug</div>
+          <div class="time green">11 am</div>
+          <div class="reminder-desc">Take red pill and blue pill</div>
+        </div>
+      </div>
+
+      <div class="add-reminder-btn-container">
+        <ion-button>Add Reminder</ion-button>
+      </div>
+    </div>
+    <!-- Upcoming End -->
+
+    <!-- Daily Diet Start -->
+    <div class="daily-diet">
+      <p class="section-title">Daily Diet</p>
+      <div class="date-selector-container">
+        <div class="date-selector">
+          <div class="previous-btn" (click)="goToPrevious()">
+
+          </div>
+          <div class="date" *ngIf="!isToday">
+            {{selectedDate.getFullYear()}}/{{selectedDate.getMonth()+1}}/{{selectedDate.getDate()}}
+          </div>
+          <div class="date" *ngIf="isToday">
+            Today
+          </div>
+          <div class="next-btn" (click)="goToNext()">
+
+          </div>
+        </div>
+      </div>
+      <div class="diet-list">
+        <div class="diet-item">
+          <div class="time">
+            10am
+          </div>
+          <div class="diet-desc">
+            Apple 20 grams
+          </div>
+        </div>
+
+        <div class="diet-item">
+          <div class="time">
+            10am
+          </div>
+          <div class="diet-desc">
+            cheese sandwich 20 grams
+          </div>
+        </div>
+
+        <div class="diet-item">
+          <div class="time">
+            10am
+          </div>
+          <div class="diet-desc">
+            Apple 20 grams
+          </div>
+        </div>
+
+        <div class="diet-item">
+          <div class="time">
+            10am
+          </div>
+          <div class="diet-desc">
+            Chicken pie 20 grams
+          </div>
+        </div>
+      </div>
+      <div class="add-meal-btn-container">
+        <ion-button>Add meal</ion-button>
+      </div>
+    </div>
+    <!-- Daily Diet End -->
+  </div>
+</ion-content>

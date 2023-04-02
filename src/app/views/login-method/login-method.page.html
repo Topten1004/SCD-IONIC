@@ -1,0 +1,28 @@
+<ion-content [fullscreen]="true">
+  <div class="login-method-main">
+    <img src="assets/img/sickle_in_africa.png" width=70%/>
+    <p class="company-name">SCD CHOMMIE</p>
+    <p class="desc">
+      The SCD Health Tracker App is an online and offline app that manangement SCD healthcare. The online version requires registration as it automatically uploads user data to the SicklenInAfrica servers, while the offline default app version saves this data on your device. Please read the Privacy Policy for more information and select which
+    </p>
+    <div class="contact-information">
+      <p class="contact-us">
+        To Contact Us:
+      </p>
+      <p class="website-url">
+        Visit the SickleInAfrica website:
+      </p>
+      <a class="link">
+        https://www.sickleinafrica.org/
+      </a>
+    </div>
+
+    <div class="select-login-method">
+      <p class="login-desc">Select login method</p>
+      <div class="btn-group">
+        <ion-button [routerLink]="['/login']">Online</ion-button>
+        <ion-button>Offline</ion-button>
+      </div>
+    </div>
+  </div>
+</ion-content>

@@ -1,0 +1,31 @@
+.vertical-range-main {
+  transform: rotate(-90deg);
+
+  margin-top : 200px;
+  width : 10px;
+
+  position: relative;
+
+
+
+  .bar {
+    background-color: gray;
+    border-radius: 10px;
+    width: 200px;
+    height : 10px;
+  }
+
+  .value-bar {
+    height : 10px;
+    border-radius: 10px;
+  }
+}
+
+.vertical-range {
+  .label {
+    color : gray;
+    margin-top : 3px;
+
+    font-weight: 800;
+  }
+}

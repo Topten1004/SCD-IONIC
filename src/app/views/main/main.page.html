@@ -1,0 +1,28 @@
+<ion-header>
+  <div class="main-header">
+    <div class="logo">
+      <div class="main-logo">
+        <img src="assets/img/Artwork.png"/>
+      </div>
+    </div>
+    <p class="main-title">scd chommie</p>
+
+    <a routerLink="/setting">
+      <ion-icon name="menu-outline"></ion-icon>
+    </a>
+  </div>
+</ion-header>
+
+<ion-content>
+  <div class="main">
+    <ion-router-outlet></ion-router-outlet>
+  </div>
+</ion-content>
+
+<ion-footer class="main-footer">
+  <ion-button [routerLink]="['/main/dashboard']"> Dashboard </ion-button>
+  <ion-button [routerLink]="['/main/calendar']">Calendar</ion-button>
+  <ion-button [routerLink]="['/main/medication']">Medication</ion-button>
+  <ion-button [routerLink]="['/main/dictionary']">Dictionary</ion-button>
+</ion-footer>
+

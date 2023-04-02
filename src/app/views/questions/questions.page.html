@@ -1,0 +1,34 @@
+<ion-content>
+  <div class="question-main">
+    <app-emoji-selector *ngIf="stepNumber === 0"></app-emoji-selector>
+    <app-feel-pain  *ngIf="stepNumber === 1 && !checkFeelPain"></app-feel-pain>
+    <app-pain-selector *ngIf="stepNumber === 1 && checkFeelPain"></app-pain-selector>
+    <app-question-medical *ngIf="stepNumber === 2"></app-question-medical>
+    <app-how-much-sleep *ngIf="stepNumber === 3"></app-how-much-sleep>
+    <app-how-much-water *ngIf="stepNumber === 4"></app-how-much-water>
+
+    <div class="stepper">
+      <div class="stepper-step" *ngFor="let i of stepperArray">
+        <div class="stepper-line {{i <= stepNumber ? 'active-line' : ''}}"></div>
+        <div class="stepper-dot {{i <= stepNumber ? 'active-dot' : ''}}">{{i+1}}</div>
+      </div>
+    </div>
+
+    <!-- Button Part -->
+    <div class="next-btn-container" *ngIf="!(!checkFeelPain && stepNumber === 1) ">
+      <ion-button (click)="goToNextStep()" *ngIf="stepNumber !== 4">Next Step</ion-button>
+      <ion-button [routerLink]="['/main/dashboard']" *ngIf="stepNumber === 4">Complete</ion-button>
+    </div>
+
+    <div class="yes-no-btn-container" *ngIf="!checkFeelPain && stepNumber === 1">
+      <div class="yes-btn">
+        <ion-button (click)="checkFeelPain = !checkFeelPain">Yes</ion-button>
+      </div>
+      <div class="no-btn">
+        <ion-button (click)="goToNextStep()">No</ion-button>
+      </div>
+    </div>
+    <!-- Button Part End -->
+
+  </div>
+</ion-content>

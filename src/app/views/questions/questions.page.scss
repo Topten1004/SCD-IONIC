@@ -1,0 +1,150 @@
+.question-main {
+  width: 100vw;
+  min-height : 100vh;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+
+  padding-bottom: 100px;
+
+  background-color: white;
+
+  .stepper {
+    padding-top : 100px;
+
+    display: flex;
+    justify-content: center;
+    gap : 2px;
+
+    .stepper-step {
+      display : flex;
+      align-items: center;
+      gap : 2px;
+
+      &:first-child {
+        .stepper-line {
+          width: 20px;
+        }
+      }
+
+      .stepper-line {
+        width: 40px;
+        height: 5px;
+        background-color: lightgray;
+      }
+
+      .active-line {
+        background-color: rgb(179,16,16);
+      }
+
+      .stepper-dot {
+        padding : 3px;
+
+        border : 1px solid rgb(179,16,16);
+        width : 20px;
+        height : 20px;
+
+        color: rgb(179,16,16);
+        border-radius: 50%;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        font-size: 15px;
+      }
+
+      .active-dot {
+        background-color: rgb(179,16,16);
+        color : white;
+      }
+    }
+  }
+
+  .next-btn-container {
+    padding-top: 40px;
+    display: flex;
+    justify-content: center;
+
+    ion-button {
+      --background: linear-gradient(360deg, rgba(173,247,163,1) 0%, rgba(153,218,144,1) 31%, rgba(5,166,40,1) 100%);
+      // --background-hover: #9ce0be;
+      // --background-activated: #88f4be;
+      // --background-focused: #88f4be;
+
+      --color: white;
+      font-weight: 800;
+      font-size: 15px;
+
+      --border-radius: 30px;
+
+      --box-shadow: 0 2px 6px 0 rgb(0, 0, 0, 0.25);
+
+      --ripple-color: gray;
+
+      --padding-top: 25px;
+      --padding-bottom: 25px;
+      --padding-start : 50px;
+      --padding-end : 50px;
+    }
+  }
+
+  .yes-no-btn-container {
+    display : flex;
+    justify-content: center;
+    gap : 10px;
+
+    padding-top : 50px;
+
+    .yes-btn {
+      ion-button {
+        --background: linear-gradient(360deg, rgba(173,247,163,1) 0%, rgba(153,218,144,1) 31%, rgba(5,166,40,1) 100%);
+        // --background-hover: #9ce0be;
+        // --background-activated: #88f4be;
+        // --background-focused: #88f4be;
+
+        --color: white;
+        font-weight: 800;
+        font-size: 15px;
+
+        --border-radius: 30px;
+
+        --box-shadow: 0 2px 6px 0 rgb(0, 0, 0, 0.25);
+
+        --ripple-color: gray;
+
+        --padding-top: 25px;
+        --padding-bottom: 25px;
+        --padding-start : 50px;
+        --padding-end : 50px;
+      }
+    }
+
+    .no-btn {
+      ion-button {
+        --background: linear-gradient(180deg, rgb(250, 192, 192) 0%, rgba(218,144,144,1) 31%, rgba(166,5,5,1) 100%);
+
+        // --background-hover: #9ce0be;
+        // --background-activated: #88f4be;
+        // --background-focused: #88f4be;
+
+        --color: white;
+        font-weight: 800;
+        font-size: 15px;
+
+        --border-radius: 30px;
+
+        --box-shadow: 0 2px 6px 0 rgb(0, 0, 0, 0.25);
+
+        --ripple-color: gray;
+
+        --padding-top: 25px;
+        --padding-bottom: 25px;
+        --padding-start : 50px;
+        --padding-end : 50px;
+      }
+    }
+  }
+}

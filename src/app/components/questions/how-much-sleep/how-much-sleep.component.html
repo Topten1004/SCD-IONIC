@@ -1,0 +1,12 @@
+<div class="how-much-sleep-main">
+  <p class="question">
+    How much sleep did you get?
+  </p>
+
+  <div class="time-selector">
+    <app-wheel-selector [selected_value]="5" [offset]="1" [min]="1" [max]="24"></app-wheel-selector>
+    <p class="hours">Hours</p>
+    <app-wheel-selector [selected_value]="30" [offset]="10" [min]="10" [max]="50"></app-wheel-selector>
+    <p class="minutes">Minutes</p>
+  </div>
+</div>

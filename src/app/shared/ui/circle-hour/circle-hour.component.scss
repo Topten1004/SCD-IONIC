@@ -1,0 +1,18 @@
+.circle-hour-main {
+  border-width: 2px;
+  border-style: solid;
+  border-radius: 50%;
+
+  width : 60px;
+  height : 60px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .label {
+    color : rgb(179,16,16);
+    font-weight: 800;
+    font-size: 13px;
+  }
+}

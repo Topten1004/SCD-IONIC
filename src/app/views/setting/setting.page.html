@@ -1,0 +1,18 @@
+<ion-content>
+  <div class="setting-main">
+    <div class="white-back">
+      <a routerLink="/main/dashboard"><img src="assets/img/Artwork.png"/></a>
+    </div>
+
+    <div class="gray-back"></div>
+
+    <div class="setting-pad">
+      <div class="avatar"></div>
+      <ion-list lines="none">
+        <ion-item class="setting-item" *ngFor="let setting of settingList">
+          <ion-label><a routerLink="{{setting.link}}">{{setting.label}}</a></ion-label>
+        </ion-item>
+      </ion-list>
+    </div>
+  </div>
+</ion-content>

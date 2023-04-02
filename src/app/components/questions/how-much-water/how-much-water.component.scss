@@ -1,0 +1,44 @@
+.how-much-water-main {
+  padding-left: 5%;
+  padding-right: 5%;
+
+  p {
+    margin: 0px;
+  }
+
+  .section-title {
+    font-weight: 800;
+    color : rgb(179,16,16);
+    font-size: 20px;
+  }
+
+  .wheel-selector {
+    padding-top : 30px;
+    padding-bottom: 30px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap : 30px;
+
+    .suffix {
+      color : gray
+    }
+  }
+
+  ion-textarea.custom-textarea {
+    --background: white;
+    --color: black;
+
+    --padding-end: 20px;
+    --padding-start: 20px;
+    --padding-top : 20px;
+    --padding-bottom : 20px;
+
+    --placeholder-color: gray;
+
+    border : 1px solid black;
+    border-radius: 10px;
+  }
+
+}

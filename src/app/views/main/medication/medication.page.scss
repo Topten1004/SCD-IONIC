@@ -1,0 +1,97 @@
+.medication-main {
+  background-color: white;
+
+  padding-top : 50px;
+  padding-left : 5%;
+  padding-right : 5%;
+
+  p {
+    margin : 0px;
+  }
+
+  .section-title {
+    color: rgb(179,16,16);
+    font-size : 20px;
+    font-weight: 800;
+  }
+
+  ion-item  {
+    --background : white;
+  }
+
+  ion-label {
+    --color : gray;
+    font-size : 15px;
+  }
+  ion-checkbox {
+    --background : white;
+    --size: 25px;
+    --background-checked: rgb(179,16,16);
+  }
+
+  ion-checkbox::part(container) {
+    border-radius: 50%;
+    border: 2px solid rgb(179,16,16);
+  }
+
+  .medication-list {
+    ion-item {
+      --border-color : white;
+    }
+  }
+
+  ion-input {
+    --color : gray;
+  }
+
+  .desc {
+    padding-top : 20px;
+
+    color: rgb(179,16,16);
+    font-weight: 800;
+  }
+
+  .amount-of-week {
+    color : gray;
+    padding-top : 20px;
+  }
+
+  .day-week {
+    padding-top : 10px;
+
+    display: flex;
+    justify-content: space-between;
+    gap : 20px;
+  }
+
+  .update-btn-container {
+    padding-top : 30px;
+    padding-bottom : 50px;
+
+    display: flex;
+    justify-content: center;
+
+    ion-button {
+      --background: linear-gradient(180deg, rgb(250, 192, 192) 0%, rgba(218,144,144,1) 31%, rgba(166,5,5,1) 100%);
+
+      // --background-hover: #9ce0be;
+      // --background-activated: #88f4be;
+      // --background-focused: #88f4be;
+
+      --color: white;
+      font-weight: 800;
+      font-size: 15px;
+
+      --border-radius: 30px;
+
+      --box-shadow: 0 2px 6px 0 rgb(0, 0, 0, 0.25);
+
+      --ripple-color: gray;
+
+      --padding-top: 25px;
+      --padding-bottom: 25px;
+      --padding-start : 50px;
+      --padding-end : 50px;
+    }
+  }
+}

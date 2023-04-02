@@ -1,0 +1,15 @@
+<div class="pain-selector-main">
+  <p class="desc">
+    Where did you feel the pain?
+  </p>
+  <p class="status">
+    No pain area selected
+  </p>
+  <div class="body-img-container">
+    <img src="assets/img/body.png" (click)="selectPainPoint($event)"/>
+    <div class="pain-point" *ngFor="let point of painPoints" [ngStyle]="{left : (point.x - 20) + 'px' , top : (point.y - 20) + 'px'}">
+      <img src="assets/img/pain.png" />
+    </div>
+
+  </div>
+</div>

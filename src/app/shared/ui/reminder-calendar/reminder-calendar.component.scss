@@ -1,0 +1,77 @@
+.reminder-calendar-main {
+  background-color: lightgray;
+  border-radius: 10px;
+  min-width: 300px;
+
+  padding-top: 15px;
+  padding-bottom: 15px;
+
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    border-bottom: 1px solid gray;
+
+    .month-year {
+      padding-left : 15px;
+      color : black;
+      font-weight: bold;
+      font-size: 20px;
+    }
+
+    .btn-group {
+      padding-right: 15px;
+      display: flex;
+      gap : 20px;
+
+      .btn {
+        border-radius: 5px;
+        color : white;
+
+        background-color: rgb(179,16,16);
+        width: 30px;
+        height: 25px;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+
+  }
+
+  .weeks {
+    margin-top : 15px;
+    display: flex;
+    justify-content: space-between;
+
+    padding-left : 10px;
+    padding-right: 10px;
+
+    .week-name {
+      color : black;
+      font-weight: bold;
+
+      width : 30px;
+      text-align: center;
+    }
+  }
+
+  .dates {
+    padding-top : 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+
+    .row {
+      display: flex;
+      justify-content: space-between;
+
+      .date {
+        color : black;
+        width : 30px;
+        text-align: center;
+      }
+    }
+  }
+}

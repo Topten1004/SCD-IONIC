@@ -1,0 +1,69 @@
+<ion-content>
+  <div class="medication-main">
+
+    <!-- 1th Part Start -->
+    <p class="section-title">
+      What medication/remedy did you take for your pain?
+    </p>
+
+    <div class="medication-list">
+      <ion-item>
+        <ion-checkbox slot="start"></ion-checkbox>
+        <ion-label>Hydroxyurea</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-checkbox slot="start"></ion-checkbox>
+        <ion-label>Paracetamol</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-checkbox slot="start"></ion-checkbox>
+        <ion-label>None</ion-label>
+      </ion-item>
+    </div>
+
+    <p class="desc">
+      Alternative treatment:
+    </p>
+
+    <ion-item>
+      <ion-input [clearOnEdit]="true" placeholder="eg.Casava leaves"></ion-input>
+    </ion-item>
+    <!-- End 1th Part -->
+
+    <!-- Start 2nd Part -->
+    <p class="section-title" style="padding-top : 30px;">
+      Were you hospitalised?
+    </p>
+
+    <ion-item>
+      <ion-label >Date: </ion-label>
+      <ion-input type="date" placeholder=""></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label >Time: </ion-label>
+      <ion-input [clearOnEdit]="true" placeholder=""></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label >Important Details: </ion-label>
+      <ion-input type="password" placeholder=""></ion-input>
+    </ion-item>
+    <p class="amount-of-week">
+      Amount of work/school missed
+    </p>
+    <div class="day-week">
+      <ion-item>
+        <ion-label >Days</ion-label>
+        <ion-input type="password" placeholder=""></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label >Hours</ion-label>
+        <ion-input type="number" placeholder=""></ion-input>
+      </ion-item>
+    </div>
+
+    <div class="update-btn-container">
+      <ion-button>Update</ion-button>
+    </div>
+    <!-- End 2nd Part -->
+  </div>
+</ion-content>

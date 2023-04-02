@@ -1,0 +1,85 @@
+<div class="reminder-calendar-main">
+  <div class="header">
+    <p class="month-year">{{months[cur_month]}} {{cur_year}}</p>
+    <div class="btn-group">
+      <div class="btn previous" (click)="previousDateMonth()">
+        <ion-icon name="chevron-back-outline"></ion-icon>
+      </div>
+      <div class="btn next" (click)="nextDateMonth()">
+        <ion-icon name="chevron-forward-outline"></ion-icon>
+      </div>
+    </div>
+  </div>
+
+  <div class="weeks">
+    <div class="week-name" *ngFor="let week of weeks">
+      {{week}}
+    </div>
+  </div>
+
+  <div class="dates">
+
+    <!-- Make Prefix -->
+    <div class="row">
+      <div class="date" *ngFor="let i of prefixEmptyNumbers">
+
+      </div>
+      <div class="date" *ngFor="let j of prefixFillNumbers"  id="add-reminder-dialog{{j+1}}">
+        {{j + 1}}
+      </div>
+    </div>
+
+    <!-- Make Perfect Week -->
+    <div class="row" *ngFor="let i of perfectWeekCount; let numberOfWeek = index;">
+      <div class="date" *ngFor="let j of weeks; let numberOfDay = index;"  id="add-reminder-dialog{{getDateFromLoop(numberOfWeek, numberOfDay)}}">
+        {{ getDateFromLoop(numberOfWeek, numberOfDay) }}
+      </div>
+    </div>
+
+    <!-- Make Suffix -->
+    <div class="row" *ngIf="suffixFillNumbers.length">
+      <div class="date" *ngFor="let i of suffixFillNumbers"  id="add-reminder-dialog{{ prefixFillNumbers.length + 7 * perfectWeekCount.length + i + 1 }}">
+        {{ prefixFillNumbers.length + 7 * perfectWeekCount.length + i + 1 }}
+      </div>
+      <div class="date" *ngFor="let j of suffixEmptyNumbers">
+
+      </div>
+    </div>
+  </div>
+
+  <ion-modal id="add-reminder-modal" *ngFor="let date of getDaysArray()" #modal trigger="add-reminder-dialog{{date+1}}">
+    <ng-template>
+      <div class="wrapper">
+        <ion-item>
+          <ion-label position="stacked">Add Title</ion-label>
+          <ion-input [clearOnEdit]="true" placeholder=""></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label position="stacked">Set Date</ion-label>
+          <ion-input [clearOnEdit]="true" placeholder="" type="date"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label position="stacked">Set Time</ion-label>
+          <ion-input [clearOnEdit]="true" placeholder="" type="time"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label position="stacked">Doesn't Repeat</ion-label>
+          <ion-select >
+            <ion-select-option value="daily">Daily</ion-select-option>
+            <ion-select-option value="weekly">Weekly</ion-select-option>
+            <ion-select-option value="monthly">Monthly</ion-select-option>
+            <ion-select-option value="custom">Custom</ion-select-option>
+          </ion-select>
+        </ion-item>
+
+        <div class="btn-group">
+          <ion-button class="add-btn">Add</ion-button>
+          <ion-button class="cancel-btn">Cancel</ion-button>
+        </div>
+      </div>
+    </ng-template>
+  </ion-modal>
+</div>

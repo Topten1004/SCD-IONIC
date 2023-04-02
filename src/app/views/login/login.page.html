@@ -1,0 +1,23 @@
+<ion-content [fullscreen]="true">
+  <div class="login-main">
+    <img src="assets/img/sickle_in_africa.png" width="50%" />
+    <p class="welcome">Welcome!</p>
+    <p class="question">Login with your details below or </p>
+    <a class="link" routerLink="/sign-up">sign up</a>
+    <div class="login-form">
+      <ion-item>
+        <ion-label position="stacked">Username</ion-label>
+        <ion-input [clearOnEdit]="true" placeholder=""></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="stacked">Email</ion-label>
+        <ion-input placeholder="" type="email"></ion-input>
+      </ion-item>
+    </div>
+    <div class="login-btn-container">
+      <ion-button [routerLink]="['/to-five-question']">Login</ion-button>
+      <p class="forgot-pass">Forgot your password?</p>
+    </div>
+  </div>
+</ion-content>

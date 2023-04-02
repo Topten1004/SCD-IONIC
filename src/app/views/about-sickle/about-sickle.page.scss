@@ -1,0 +1,50 @@
+.about-sickle-header {
+  background-color: white;
+  color : black ;
+
+  height : 50px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding-left: 5%;
+  padding-right: 5%;
+
+  border-bottom: 5px solid lightgray;
+
+  p {
+    margin : 0px;
+    font-size: 20px;
+    font-weight: 800;
+  }
+}
+
+.about-sickle-main {
+  min-height: 100vh;
+  background-color: white;
+
+  padding-left: 5%;
+  padding-right: 5%;
+  padding-top: 10px;
+
+  p {
+    margin : 0px;
+  }
+
+  .section-title {
+    padding-bottom: 10px;
+    padding-top: 30px;
+
+    font-size: 20px;
+    font-weight: 800;
+    color : black;
+  }
+
+  .desc {
+    color: black;
+    line-height: 25px;
+
+    padding-top: 10px;
+  }
+}

@@ -1,0 +1,321 @@
+/*
+ * App Global CSS
+ * ----------------------------------------------------------------------------
+ * Put style rules here that you want to apply globally. These styles are for
+ * the entire app and not just one component. Additionally, this file can be
+ * used as an entry point to import other CSS/Sass files to be included in the
+ * output CSS.
+ * For more information on global stylesheets, visit the documentation:
+ * https://ionicframework.com/docs/layout/global-stylesheets
+ */
+
+/* Core CSS required for Ionic components to work properly */
+@import "~@ionic/angular/css/core.css";
+
+/* Basic CSS for apps built with Ionic */
+@import "~@ionic/angular/css/normalize.css";
+@import "~@ionic/angular/css/structure.css";
+@import "~@ionic/angular/css/typography.css";
+@import '~@ionic/angular/css/display.css';
+
+/* Optional CSS utils that can be commented out */
+@import "~@ionic/angular/css/padding.css";
+@import "~@ionic/angular/css/float-elements.css";
+@import "~@ionic/angular/css/text-alignment.css";
+@import "~@ionic/angular/css/text-transformation.css";
+@import "~@ionic/angular/css/flex-utils.css";
+
+ion-modal#add-reminder-modal {
+  --width: fit-content;
+  --min-width: 300px;
+  --height: fit-content;
+  --border-radius: 6px;
+  --box-shadow: 0 28px 48px rgba(0, 0, 0, 0.4);
+
+  ion-item {
+    margin-bottom : 20px;
+    --ion-item-background: white;
+    ion-label {
+      --color : black;
+      font-size: 20px;
+    }
+
+    ion-input {
+      --color : black;
+    }
+
+    ion-select {
+      --placeholder-color: gray;
+      --placeholder-opacity: 0.5;
+    }
+
+    ion-select::part(text) {
+      color: gray;
+    }
+  }
+}
+
+ion-modal#add-reminder-modal .wrapper {
+  background-color: white;
+  padding : 15px;
+
+  .btn-group {
+    display: flex;
+    justify-content : space-around;
+
+    ion-button.add-btn {
+      --background: linear-gradient(360deg, rgba(173,247,163,1) 0%, rgba(153,218,144,1) 31%, rgba(5,166,40,1) 100%);
+      // --background-hover: #9ce0be;
+      // --background-activated: #88f4be;
+      // --background-focused: #88f4be;
+
+      --color: white;
+      font-weight: 800;
+      font-size: 15px;
+
+      --border-radius: 30px;
+
+      --box-shadow: 0 2px 6px 0 rgb(0, 0, 0, 0.25);
+
+      --ripple-color: gray;
+
+      --padding-top: 20px;
+      --padding-bottom: 20px;
+      --padding-start : 30px;
+      --padding-end : 30px;
+    }
+
+    ion-button.cancel-btn {
+      --background: linear-gradient(180deg, rgba(251,251,251,1) 0%, rgba(218,144,144,1) 31%, rgba(166,5,5,1) 100%);
+
+      // --background-hover: #9ce0be;
+      // --background-activated: #88f4be;
+      // --background-focused: #88f4be;
+
+      --color: white;
+      font-weight: 800;
+      font-size: 15px;
+
+      --border-radius: 30px;
+
+      --box-shadow: 0 2px 6px 0 rgb(0, 0, 0, 0.25);
+
+      --ripple-color: gray;
+
+      --padding-top: 20px;
+      --padding-bottom: 20px;
+      --padding-start : 30px;
+      --padding-end : 30px;
+    }
+  }
+}
+
+ion-modal#compare-days-modal {
+  --width: fit-content;
+  --min-width: 300px;
+  --height: fit-content;
+  --border-radius: 6px;
+  --box-shadow: 0 28px 48px rgba(0, 0, 0, 0.4);
+}
+
+ion-modal#compare-days-modal .wrapper {
+  background-color: white;
+  padding : 15px;
+
+  p {
+    margin: 0px;
+  }
+
+  .date-selector-container {
+    margin-top : 20px;
+
+    display: flex;
+    justify-content: center;
+
+    .date-selector {
+      position: relative;
+      width : 80%;
+
+      height : 30px;
+      .date {
+        position: relative;
+        z-index: 100;
+        background-color: white;
+        width: 100%;
+        height: 100%;
+
+        color : rgb(179,16,16);
+        text-align: center;
+
+        font-weight: 800;
+        font-size : 20px;
+      }
+
+      .previous-btn {
+        z-index: 99;
+        position: absolute;
+        width : 15px;
+        height : 15px;
+        transform: rotate(45deg);
+        background-color: rgb(179,16,16);
+        top : 6px;
+        left : -8px;
+
+
+      }
+      .next-btn {
+        z-index: 99;
+        position: absolute;
+        width : 15px;
+        height : 15px;
+        transform: rotate(45deg);
+        background-color: rgb(179,16,16);
+        top : 6px;
+        right: -8px;
+      }
+    }
+  }
+
+  .circle-hour {
+    padding-top : 10px;
+
+    display: flex;
+    flex-direction: column;
+    gap : 10px;
+    align-items: center;
+  }
+
+  .circle-hour-desc {
+    color : gray;
+    font-weight: 800;
+  }
+
+  .circle-hour-list {
+    display: flex;
+    justify-content: space-around;
+    padding-top : 20px;
+  }
+
+  .list-label {
+    color : rgb(179,16,16);
+    font-size: 17px;
+    font-weight: 800;
+
+    padding-left: 20px;
+    padding-top : 20px;
+    padding-bottom: 10px;
+  }
+
+  .list-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    gap : 5px;
+
+    .list-item {
+      display: flex;
+
+      div {
+        padding : 10px;
+      }
+
+      .time {
+        color : black;
+        font-weight: bold;
+        background-color: rgb(236, 127, 127);
+      }
+
+      .list-desc {
+        background-color: lightgray;
+        color : black;
+        font-weight: bold;
+        padding-left: 20px;
+        min-width: 270px;
+      }
+    }
+
+  }
+
+  ion-button {
+    margin-top : 10px;
+    width: 100%;
+
+    --background: white;
+    // --background-hover: #9ce0be;
+    // --background-activated: #88f4be;
+    // --background-focused: #88f4be;
+
+    --color: rgb(179,16,16) !important;
+    font-weight: bold;
+    font-size: 10px;
+
+    --border-radius: 20px;
+    --border-color: rgb(179,16,16);
+    --border-style : solid;
+    --border-width: 1px ;
+
+    --box-shadow: 0 2px 6px 0 rgb(0, 0, 0, 0.25);
+
+    --ripple-color: gray;
+
+    --padding-top: 15px;
+    --padding-bottom: 15px;
+    --padding-start : 30px;
+    --padding-end : 30px;
+  }
+
+  .btn-group {
+    padding-top : 20px;
+    padding-bottom : 20px;
+
+    display: flex;
+    justify-content : space-around;
+
+    ion-button {
+      --color : white !important;
+      --border-color : none !important;
+    }
+
+    ion-button.update-btn {
+      --background: linear-gradient(360deg, rgba(173,247,163,1) 0%, rgba(153,218,144,1) 31%, rgba(5,166,40,1) 100%);
+
+      font-weight: 800;
+      font-size: 15px;
+
+      --border-radius: 30px;
+
+      --box-shadow: 0 2px 6px 0 rgb(0, 0, 0, 0.25);
+
+      --ripple-color: gray;
+
+      --padding-top: 20px;
+      --padding-bottom: 20px;
+      --padding-start : 30px;
+      --padding-end : 30px;
+    }
+
+    ion-button.close-btn {
+      --background: linear-gradient(180deg, rgba(251,251,251,1) 0%, rgba(218,144,144,1) 31%, rgba(166,5,5,1) 100%);
+
+      // --background-hover: #9ce0be;
+      // --background-activated: #88f4be;
+      // --background-focused: #88f4be;
+
+      --color: white;
+      font-weight: 800;
+      font-size: 15px;
+
+      --border-radius: 30px;
+
+      --box-shadow: 0 2px 6px 0 rgb(0, 0, 0, 0.25);
+
+      --ripple-color: gray;
+
+      --padding-top: 20px;
+      --padding-bottom: 20px;
+      --padding-start : 30px;
+      --padding-end : 30px;
+    }
+  }
+}
